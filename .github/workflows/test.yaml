@@ -35,8 +35,8 @@ jobs:
       - name: Convert
         id: convert
         run: |
-          echo `cat style.css` >> ${{ env.BODY }}
-          showdown makehtml -i ${{ env.BODY }} -o ${{ env.OUT }} -c tasklists -c ghCodeBlocks -c ghCompatibleHeaderId
+          echo `cat style.css ${{ env.BODY }}` | \
+            showdown makehtml -o ${{ env.OUT }} -c tasklists -c ghCodeBlocks -c ghCompatibleHeaderId
           echo out=`cat ${{ env.OUT }}` >> $GITHUB_OUTPUT
 
       - name: comment
