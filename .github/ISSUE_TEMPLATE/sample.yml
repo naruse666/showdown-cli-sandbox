@@ -16,8 +16,6 @@ body:
       label: Another checks
       description: Write here, if you need another checks.
       placeholder: '- [] checks'
-    validations:
-      required: true
   - type: checkboxes
     id: terms
     attributes:
