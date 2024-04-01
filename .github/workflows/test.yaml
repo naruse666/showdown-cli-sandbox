@@ -15,6 +15,9 @@ jobs:
       - name: Install showdown
         run: npm install showdown
 
+      - name: where is showdown 
+        run: which showdown
+
       - name: Convert
         id: convert
         run: |
