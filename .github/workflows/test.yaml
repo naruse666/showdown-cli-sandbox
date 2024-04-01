@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.issue.label }} == "need-convert"
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4 
+
       - name: Get issue body
         run: echo "${{ github.event.issue.body }}" > body.md
 
       - name: Install showdown
         run: npm install showdown -g
-
-      - name: where is showdown 
-        run: which showdown
 
       - name: Convert
         id: convert
