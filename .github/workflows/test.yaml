@@ -21,7 +21,8 @@ jobs:
       - name: Convert
         id: convert
         run: |
-          cat body.md style.css |showdown makehtml -o out.html -c tasklists
+          echo `cat style.css` >> body.md
+          showdown makehtml -i body.md -o out.html -c tasklists
           echo out=`cat out.html` >> $GITHUB_OUTPUT
 
       - name: comment
