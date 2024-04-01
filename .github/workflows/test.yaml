@@ -1,0 +1,42 @@
+name: Convert md to html
+on:
+  issues:
+    types:
+      - opened
+jobs:
+  Convert:
+    name: Convert to html
+    runs-on: ubuntu-latest
+    if: ${{ github.event.issue.label }} == "need-convert"
+    steps:
+      - name: Get issue body
+        run: echo "${{ github.event.issue.body }}" > body.md
+
+      - name: Install showdown
+        run: npm install showdown
+
+      - name: Convert
+        id: convert
+        run: |
+          cat body.md style.css |showdown makehtml -o out.html -c tasklists
+          echo out=`cat out.html` >> $GITHUB_OUTPUT
+
+      - name: comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = `### Converted HTML
+
+            <details><summary>Converted HTML</summary>
+
+            ${{ steps.convert.outputs.out }}
+
+            </details>`
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            })

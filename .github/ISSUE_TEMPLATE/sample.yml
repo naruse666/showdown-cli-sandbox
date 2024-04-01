@@ -1,0 +1,28 @@
+name: Request
+description: テスト
+label: ["need-convert"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      description: Sample Checklist
+      options:
+        - label: check this
+        - label: 1 + 1 = 2
+  - type: textarea
+    id: another checks
+    attributes:
+      label: Another checks
+      description: Write here, if you need another checks.
+      placeholder: '- [] checks'
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
