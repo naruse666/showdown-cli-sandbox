@@ -10,7 +10,7 @@ jobs:
     if: ${{ github.event.issue.label }} == "need-convert"
     permissions:
       id-token: write
-      contents: read
+      contents: write
       issues: write
       pull-requests: write
     env:
