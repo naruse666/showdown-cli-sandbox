@@ -8,6 +8,11 @@ jobs:
     name: Convert to html
     runs-on: ubuntu-latest
     if: ${{ github.event.issue.label }} == "need-convert"
+    permissions:
+      id-token: write
+      contents: read
+      issues: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4 
