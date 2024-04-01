@@ -39,7 +39,7 @@ jobs:
         run: |
           echo "`cat style.css ${{ env.BODY }}`" > ${{ env.TMP }}
           showdown makehtml -i ${{ env.TMP }} -o ${{ env.OUT }} -c tasklists -c ghCodeBlocks -c ghCompatibleHeaderId
-          echo out="`cat ${{ env.OUT }}`" >> $GITHUB_OUTPUT
+          echo out=`cat ${{ env.OUT }}` >> $GITHUB_OUTPUT
           rm -f ${{ env.TMP }}
 
       - name: comment
