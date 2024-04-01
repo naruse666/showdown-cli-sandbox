@@ -1,0 +1,13 @@
+### Checklist
+
+- [X] check this
+- [ ] 1 + 1 = 2
+
+### Another checks
+
+- [ ] additional check1
+
+### Code of Conduct
+
+- [X] I agree to follow this project's Code of Conduct
+<style> body { font-family: Arial, sans-serif; text-align: center; } .score-card { border: 2px solid #333; border-radius: 10px; padding: 20px; width: 200px; margin: 0 auto; } .title { font-size: 20px; margin-bottom: 10px; } .score { font-size: 24px; font-weight: bold; } </style>
