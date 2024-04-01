@@ -71,4 +71,4 @@ jobs:
           git add .
           git commit -m "Update issue"
           git push origin update/issue-${{ github.event.issue.number }}
-          gh pr create -t "Update Issue" -b "closes: #${{ github.envent.issue.number }}"
+          gh pr create -t "Update Issue" -b "closes: #${{ github.event.issue.number }}"
