@@ -39,7 +39,9 @@ jobs:
 
             <details><summary>Converted HTML</summary>
 
+            \`\`\`html
             ${{ steps.convert.outputs.out }}
+            \`\`\`
 
             </details>`
             
