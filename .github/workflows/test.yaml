@@ -12,6 +12,7 @@ jobs:
       id-token: write
       contents: read
       issues: write
+      pull-requests: write
     env:
       BODY: issues/${{ github.event.issue.number }}/body.md
 
