@@ -13,7 +13,7 @@ jobs:
         run: echo "${{ github.event.issue.body }}" > body.md
 
       - name: Install showdown
-        run: npm install showdown
+        run: npm install showdown -g
 
       - name: where is showdown 
         run: which showdown
