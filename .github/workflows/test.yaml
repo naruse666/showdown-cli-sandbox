@@ -27,7 +27,7 @@ jobs:
         id: convert
         run: |
           echo `cat style.css` >> body.md
-          showdown makehtml -i body.md -o out.html -c tasklists -c simpleLineBreaks
+          showdown makehtml -i body.md -o out.html -c tasklists -c ghCodeBlocks -c ghCompatibleHeaderId
           echo out=`cat out.html` >> $GITHUB_OUTPUT
 
       - name: comment
