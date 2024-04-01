@@ -11,7 +11,7 @@ body:
         - label: check this
         - label: 1 + 1 = 2
   - type: textarea
-    id: another checks
+    id: another-checks
     attributes:
       label: Another checks
       description: Write here, if you need another checks.
