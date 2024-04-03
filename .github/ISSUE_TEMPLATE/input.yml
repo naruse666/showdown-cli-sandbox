@@ -3,6 +3,7 @@ description: Test
 title: "[Test]: Input"
 labels: ["bug"]
 # Comment
+# こんにちは
 body:
   - type: markdown
     attributes:
