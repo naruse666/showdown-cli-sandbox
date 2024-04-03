@@ -22,5 +22,6 @@ body:
         - MacOS
         - Linux
         - Windows
+        - それ以外
       default: 0
 # Comment
