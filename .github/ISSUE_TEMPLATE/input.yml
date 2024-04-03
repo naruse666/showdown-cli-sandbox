@@ -1,7 +1,8 @@
 name: Input Test
 description: Test
 title: "[Test]: Input"
-labels: ["need-convert"]
+labels: ["bug"]
+# Comment
 body:
   - type: markdown
     attributes:
@@ -21,3 +22,4 @@ body:
         - Linux
         - Windows
       default: 0
+# Comment
