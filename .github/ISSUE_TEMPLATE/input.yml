@@ -1,6 +1,7 @@
 name: Input Test
 description: Test
 title: "[Test]: Input"
+labels: ["bug"]
 body:
   - type: markdown
     attributes:
