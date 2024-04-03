@@ -9,3 +9,13 @@ body:
       label: "Service Name"
     validations:
       required: true
+  - type: dropdown
+    id: os 
+    attributes:
+      label: "Choose your OS"
+      options:
+        - ''
+        - MacOS
+        - Linux
+        - Windows
+      default: 0
