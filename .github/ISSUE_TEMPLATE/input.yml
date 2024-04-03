@@ -30,3 +30,9 @@ body:
       options:
         - label: "生ぎだいっ!"
         - label: "船降りろ"
+    # Other Checks
+  - type: textarea
+    id: other-checks
+    attributes:
+      label: 追加のチェック項目(あれば)
+      placeholder: '- [ ] checks'
