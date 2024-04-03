@@ -2,8 +2,6 @@ name: Input Test
 description: Test
 title: "[Test]: Input"
 labels: ["bug"]
-# Comment
-# こんにちは
 body:
   - type: markdown
     attributes:
@@ -24,4 +22,11 @@ body:
         - Windows
         - それ以外
       default: 0
-# Comment
+  - type: checkboxes
+    id: checkbox
+    attributes:
+      label: 選ぶのだ
+      description: "さあ、選びたまえ"
+      options:
+        - label: "生ぎだいっ!"
+        - label: "船降りろ"
