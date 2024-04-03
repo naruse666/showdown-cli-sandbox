@@ -1,0 +1,8 @@
+name: Input Test
+description: Test
+body:
+  - type: input
+    attributes:
+      label: "Service Name"
+    validations:
+      required: true
